@@ -1,0 +1,136 @@
+/* PlatformFraud.css */
+.agent-risk-heatmap {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-3);
+}
+
+@media (min-width: 640px) {
+  .agent-risk-heatmap {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+}
+
+.risk-card {
+  padding: var(--space-3);
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  border-width: 1px;
+  border-style: solid;
+  transition: all var(--transition-fast);
+  min-height: 76px;
+}
+.risk-card:hover { transform: translateY(-2px); }
+
+.risk-card--high   { background: var(--color-error-light);   border-color: rgba(185, 28, 28, 0.2); }
+.risk-card--medium { background: var(--color-warning-light); border-color: rgba(180, 83, 9, 0.2); }
+.risk-card--low    { background: var(--color-success-light); border-color: rgba(13, 122, 95, 0.2); }
+
+.risk-card__name {
+  font-weight: var(--weight-bold);
+  font-size: var(--text-sm);
+  color: var(--color-text-primary);
+  line-height: 1.2;
+}
+
+.risk-card__meta {
+  font-size: 11px;
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+}
+
+.risk-card .status-badge {
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+/* Fraud Event Cards */
+.fraud-event-card {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+  padding: var(--space-4);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--color-border);
+  transition: all var(--transition-fast);
+}
+
+.fraud-event-card--high {
+  background: var(--color-error-light);
+}
+
+.fraud-event-card--medium {
+  background: var(--color-warning-light);
+}
+
+.fraud-event-card--low {
+  background: var(--color-surface);
+}
+
+.fraud-event-card__score {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-weight: var(--weight-bold);
+  font-size: var(--text-sm);
+  color: white;
+  flex-shrink: 0;
+}
+
+.fraud-event-card--high .fraud-event-card__score { background: var(--color-error); }
+.fraud-event-card--medium .fraud-event-card__score { background: var(--color-warning); }
+.fraud-event-card--low .fraud-event-card__score { background: var(--color-info); }
+
+.fraud-event-card__content {
+  flex: 1;
+  min-width: 0; /* Important for truncation */
+}
+
+.fraud-event-card__agent {
+  font-weight: var(--weight-semibold);
+  color: var(--color-text-primary);
+  display: block;
+}
+
+.fraud-event-card__reason {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  display: block;
+  margin-top: 2px;
+}
+
+.fraud-event-card__date {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  margin-top: 4px;
+}
+
+.fraud-event-card__actions {
+  flex-shrink: 0;
+}
+
+@media (max-width: 640px) {
+  .fraud-event-card {
+    flex-wrap: wrap;
+    gap: var(--space-3);
+  }
+  
+  .fraud-event-card__content {
+    flex: 1 1 200px;
+  }
+  
+  .fraud-event-card__actions {
+    width: 100%;
+    margin-top: var(--space-2);
+  }
+  
+  .fraud-event-card__actions .btn {
+    width: 100%;
+  }
+}

@@ -1,0 +1,206 @@
+/* ================================================================
+   e-WAKALA Design Tokens
+   Premium East African fintech — deep navy + gold + emerald
+   ================================================================ */
+
+:root {
+  /* ── BRAND PALETTE (Light Mode Adaption) ── */
+  --color-primary:          #D97757;   /* Coral Orange — vibrant, modern */
+  --color-primary-hover:    #C56648;
+  --color-primary-light:    rgba(217, 119, 87, 0.08); /* Muted for light bg */
+  --color-primary-lighter:  rgba(217, 119, 87, 0.04);
+  --color-accent:           #D97757;   /* Maintaining consistency */
+  --color-accent-hover:     #C56648;
+  --color-accent-light:     rgba(217, 119, 87, 0.08);
+  --color-emerald:          #D97757;
+  --color-emerald-light:    rgba(217, 119, 87, 0.08);
+
+  /* ── ROLE COLORS ── */
+  --color-platform:         #D97757;   
+  --color-platform-light:   rgba(217, 119, 87, 0.08);
+  --color-tenant:           #131313;
+  --color-tenant-light:     rgba(19, 19, 19, 0.05);
+  --color-supervisor:      #D97757;
+  --color-supervisor-light:rgba(217, 119, 87, 0.08);
+  --color-agent:            #D97757;
+  --color-agent-light:      rgba(217, 119, 87, 0.08);
+
+  /* ── NEUTRAL PALETTE (Light Theme) ── */
+  --color-white:            #FDFDFD;
+  --color-bg:               #E8E8E8;   /* Eye-comfort matte base */
+  --color-surface:          #F3F3F3;   /* Soft gray non-glaring surfaces */
+  --color-surface-raised:   #FAFAFA;   /* Highlight surfaces */
+  --color-border:           #D8D8D8;   /* Clearly defined mild borders */
+  --color-border-subtle:    #E2E2E2;
+  --color-border-focus:     #D97757;
+  --color-text-primary:     #1A1A1A;   /* Softened charcoal */
+  --color-text-secondary:   #5A5A5A;   /* Readable mid-gray */
+  --color-text-muted:       #8A8A8A;
+  --color-text-inverse:     #FFFFFF;
+  --color-text-accent:      #D97757;
+
+  /* ── SEMANTIC COLORS (Light Mode Contrast) ── */
+  --color-success:          #0D7A5F;
+  --color-success-light:    rgba(13, 122, 95, 0.08);
+  --color-warning:          #B45309;
+  --color-warning-light:    rgba(180, 83, 9, 0.08);
+  --color-error:            #B91C1C;
+  --color-error-light:      rgba(185, 28, 28, 0.08);
+  --color-info:             #131313;
+  --color-info-light:       rgba(19, 19, 19, 0.05);
+
+  /* ── WALLET SCHEME COLORS (User Override) ── */
+  --color-mpesa:            #FE0808;
+  --color-mpesa-light:      rgba(254, 8, 8, 0.1);
+  --color-airtel:           #AD130B;
+  --color-airtel-light:     rgba(173, 19, 11, 0.1);
+  --color-crdb:             #0B5141;
+  --color-crdb-light:       rgba(11, 81, 65, 0.1);
+  --color-halopesa:         #FF6600;
+  --color-halopesa-light:   rgba(255, 102, 0, 0.1);
+  --color-mixx:             #193878;
+  --color-mixx-light:       rgba(25, 56, 120, 0.1);
+
+  /* ── NEW WALLET SCHEMES ── */
+  --color-nmb:              #003A8F;
+  --color-nmb-light:        rgba(0, 58, 143, 0.1);
+  --color-equity:           #8DC63F;
+  --color-equity-light:     rgba(141, 198, 63, 0.1);
+  --color-nbc:              #7A0019;
+  --color-nbc-light:        rgba(122, 0, 25, 0.1);
+  --color-kcb:              #00A651;
+  --color-kcb-light:        rgba(0, 166, 81, 0.1);
+
+  /* ── TYPOGRAPHY ── */
+  --font-display:   'Outfit', 'DM Sans', sans-serif;
+  --font-body:      'DM Sans', 'Outfit', Arial, sans-serif;
+  --font-mono:      'JetBrains Mono', 'Courier New', monospace;
+
+  /* ── FONT SIZES ── */
+  --text-xs:    0.6875rem;  /* 11px */
+  --text-sm:    0.8125rem;  /* 13px */
+  --text-base:  0.9375rem;  /* 15px */
+  --text-md:    1rem;       /* 16px */
+  --text-lg:    1.125rem;   /* 18px */
+  --text-xl:    1.3125rem;  /* 21px */
+  --text-2xl:   1.625rem;   /* 26px */
+  --text-3xl:   2rem;       /* 32px */
+  --text-4xl:   2.5rem;     /* 40px */
+  --text-5xl:   3.25rem;    /* 52px */
+
+  /* ── FONT WEIGHTS ── */
+  --weight-regular:   400;
+  --weight-medium:    500;
+  --weight-semibold:  600;
+  --weight-bold:      700;
+  --weight-extrabold: 800;
+
+  /* ── LINE HEIGHTS ── */
+  --leading-tight:    1.2;
+  --leading-snug:     1.35;
+  --leading-normal:   1.5;
+  --leading-relaxed:  1.65;
+
+  /* ── SPACING SCALE ── */
+  --space-0:    0;
+  --space-1:    0.25rem;   /* 4px */
+  --space-2:    0.5rem;    /* 8px */
+  --space-3:    0.75rem;   /* 12px */
+  --space-4:    1rem;      /* 16px */
+  --space-5:    1.25rem;   /* 20px */
+  --space-6:    1.5rem;    /* 24px */
+  --space-8:    2rem;      /* 32px */
+  --space-10:   2.5rem;    /* 40px */
+  --space-12:   3rem;      /* 48px */
+  --space-16:   4rem;      /* 64px */
+  --space-20:   5rem;      /* 80px */
+  --space-24:   6rem;      /* 96px */
+
+  /* ── BORDER RADIUS ── */
+  --radius-xs:   2px;
+  --radius-sm:   6px;
+  --radius-md:   10px;
+  --radius-lg:   14px;
+  --radius-xl:   20px;
+  --radius-2xl:  28px;
+  --radius-full: 9999px;
+
+  /* ── SHADOWS ── */
+  --shadow-xs:    0 1px 2px rgba(13,27,42,0.05);
+  --shadow-sm:    0 2px 4px rgba(13,27,42,0.06), 0 1px 2px rgba(13,27,42,0.04);
+  --shadow-md:    0 4px 12px rgba(13,27,42,0.08), 0 2px 4px rgba(13,27,42,0.04);
+  --shadow-lg:    0 12px 24px rgba(13,27,42,0.10), 0 4px 8px rgba(13,27,42,0.06);
+  --shadow-xl:    0 24px 48px rgba(13,27,42,0.12), 0 8px 16px rgba(13,27,42,0.08);
+  --shadow-focus: 0 0 0 3px rgba(15,76,129,0.25);
+  --shadow-card:  0 2px 8px rgba(13,27,42,0.06), 0 0 1px rgba(13,27,42,0.08);
+
+  /* ── Z-INDEX ── */
+  --z-base:      1;
+  --z-dropdown:  100;
+  --z-sticky:    200;
+  --z-overlay:   430;
+  --z-modal:     440;
+  --z-toast:     1200;
+  --z-tooltip:   1300;
+
+  /* ── TRANSITIONS ── */
+  --transition-fast:    120ms ease;
+  --transition-normal:  220ms ease;
+  --transition-slow:    380ms ease;
+  --transition-spring:  280ms cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* ── SAFE AREAS ── */
+  --safe-top:    env(safe-area-inset-top, 0px);
+  --safe-right:  env(safe-area-inset-right, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-left:   env(safe-area-inset-left, 0px);
+
+  /* ── LAYOUT ── */
+  --sidebar-width:       240px;
+  --topnav-height:       64px;
+  --bottomnav-height:    64px;
+  --content-max-width:   1280px;
+  --card-gap:            var(--space-4);
+}
+
+/* ── DARK MODE (Unified with new brand) ── */
+@media (prefers-color-scheme: dark) {
+  :root:not(.light) {
+    --color-bg:               #131313;
+    --color-surface:          #1A1A1A;
+    --color-surface-raised:   #242424;
+    --color-border:           #2A2A2A;
+    --color-border-subtle:    #1E1E1E;
+    --color-text-primary:     #E3E1DE;
+    --color-text-secondary:   #999896;
+    --color-text-muted:       #666564;
+    --color-primary-light:    rgba(217, 119, 87, 0.15);
+    --color-platform-light:   rgba(217, 119, 87, 0.15);
+    --color-supervisor-light:rgba(217, 119, 87, 0.1);
+    --color-agent-light:      rgba(217, 119, 87, 0.15);
+    --shadow-card:  0 2px 8px rgba(0,0,0,0.4), 0 0 1px rgba(0,0,0,0.5);
+    --shadow-md:    0 4px 12px rgba(0,0,0,0.5);
+    --shadow-lg:    0 12px 24px rgba(0,0,0,0.6);
+  }
+}
+
+/* Specific class for manual toggle override */
+:root.dark {
+  --color-bg:               #131313;
+  --color-surface:          #1A1A1A;
+  --color-surface-raised:   #242424;
+  --color-border:           #2A2A2A;
+  --color-border-subtle:    #1E1E1E;
+  --color-text-primary:     #E3E1DE;
+  --color-text-secondary:   #999896;
+  --color-text-muted:       #666564;
+  --color-primary-light:    rgba(217, 119, 87, 0.15);
+  --color-platform-light:   rgba(217, 119, 87, 0.15);
+  --color-supervisor-light:rgba(217, 119, 87, 0.1);
+  --color-agent-light:      rgba(217, 119, 87, 0.15);
+  --shadow-card:  0 2px 8px rgba(0,0,0,0.4), 0 0 1px rgba(0,0,0,0.5);
+  --shadow-md:    0 4px 12px rgba(0,0,0,0.5);
+  --shadow-lg:    0 12px 24px rgba(0,0,0,0.6);
+}
+
+

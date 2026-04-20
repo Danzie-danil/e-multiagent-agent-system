@@ -1,0 +1,95 @@
+/* Input.css */
+.input-field { display: flex; flex-direction: column; gap: var(--space-2); }
+
+.input-field__label {
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  color: var(--color-text-primary);
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.input-field__required { color: var(--color-error); }
+
+.input-field__wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-field__input {
+  width: 100%;
+  background: var(--color-surface);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text-primary);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  outline: none;
+  appearance: none;
+}
+.input-field__input::placeholder { color: var(--color-text-muted); }
+.input-field__input:focus {
+  border-color: var(--color-border-focus);
+  box-shadow: var(--shadow-focus);
+}
+.input-field__input:disabled { background: var(--color-bg); cursor: not-allowed; opacity: 0.6; }
+.input-field__input[readonly] { background: var(--color-bg); cursor: default; }
+
+/* Sizes */
+.input-field {
+  --input-px: var(--space-4);
+}
+
+.input-field--has-prefix-val { --input-pl: 52px; }
+.input-field--has-suffix-val { --input-pr: var(--space-10); }
+
+.input-field--sm { --input-px: var(--space-3); }
+.input-field--sm .input-field__input { height: 34px; font-size: var(--text-sm); }
+
+.input-field--md { --input-px: var(--space-5); }
+.input-field--md .input-field__input { height: 42px; font-size: var(--text-base); }
+
+.input-field--lg { --input-px: var(--space-5); }
+.input-field--lg .input-field__input { height: 50px; font-size: var(--text-md); }
+
+.input-field__input {
+  width: 100%;
+  background: var(--color-surface);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text-primary);
+  transition: all var(--transition-fast);
+  outline: none;
+  appearance: none;
+  padding: 0 var(--input-px);
+  padding-left: var(--input-pl, var(--input-px));
+  padding-right: var(--input-pr, var(--input-px));
+}
+
+/* Error state */
+.input-field--error .input-field__input {
+  border-color: var(--color-error);
+}
+.input-field--error .input-field__input:focus {
+  box-shadow: 0 0 0 3px rgba(220,38,38,0.15);
+}
+
+.input-field__error { font-size: var(--text-xs); color: var(--color-error); }
+.input-field__hint  { font-size: var(--text-xs); color: var(--color-text-muted); }
+
+/* Prefix / Suffix */
+.input-field__prefix,
+.input-field__suffix {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+  pointer-events: none;
+  height: 100%;
+}
+.input-field__prefix { left: var(--input-px); }
+.input-field__suffix { right: var(--input-px); }
+.input-field__suffix--btn { pointer-events: all; cursor: pointer; padding: var(--space-1); border-radius: var(--radius-sm); transition: color var(--transition-fast); }
+.input-field__suffix--btn:hover { color: var(--color-text-primary); }

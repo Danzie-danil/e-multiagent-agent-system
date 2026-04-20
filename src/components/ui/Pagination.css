@@ -1,0 +1,101 @@
+/* components/ui/Pagination.css */
+.pagination-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4) var(--space-5);
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  transition: opacity 0.3s ease;
+  gap: var(--space-4);
+}
+
+.pagination--loading {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.pagination__main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pagination__info {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+}
+
+.pagination__page-indicator {
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  color: var(--color-text-primary);
+  margin-right: var(--space-4);
+}
+
+.pagination__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background: var(--color-bg);
+  color: var(--color-text-primary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pagination__btn:hover:not(:disabled) {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  background: var(--color-primary-soft);
+}
+
+.pagination__btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  background: var(--color-bg-muted);
+}
+
+/* DESKTOP specifics to group buttons on right */
+@media (min-width: 641px) {
+  .pagination__btn--prev {
+    order: 2;
+    margin-left: auto;
+  }
+  .pagination__main {
+    order: 1;
+  }
+  .pagination__btn--next {
+    order: 3;
+  }
+  /* On desktop, hide the extra padding/spacing of main if needed */
+}
+
+@media (max-width: 640px) {
+  .pagination-container {
+    padding: var(--space-3);
+    gap: var(--space-2);
+  }
+  
+  .pagination__page-indicator {
+    display: none;
+  }
+  
+  .pagination__main {
+    order: 2;
+    justify-content: center;
+  }
+  
+  .pagination__info {
+    font-size: var(--text-xs);
+    text-align: center;
+    line-height: 1.2;
+  }
+  
+  .pagination__btn--prev { order: 1; }
+  .pagination__btn--next { order: 3; }
+}

@@ -1,0 +1,41 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Supabase
+supabase/.temp/
+supabase/.env
+
+# Development Junk & Local Creds
+databaselogs.md
+live_ceedentials.md
+CREDENTIALS.md
+status_utf8.txt
+supabase_status.txt
+.unimportant.md
+browser and app icon.png
+splash_screen.png
+src/pages/agent-pos/.env*
+src/pages/platform-admin/.env*
+src/pages/supervisor/.env*

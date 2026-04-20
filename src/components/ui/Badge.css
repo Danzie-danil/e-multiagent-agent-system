@@ -1,0 +1,68 @@
+/* Badge.css */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  border-radius: var(--radius-full);
+  font-weight: var(--weight-semibold);
+  letter-spacing: 0.01em;
+  line-height: 1;
+}
+
+.badge--sm  { padding: 3px var(--space-2);   font-size: var(--text-xs); }
+.badge--md  { padding: 5px var(--space-3);   font-size: var(--text-sm); }
+
+.badge--default  { background: var(--color-border-subtle); color: var(--color-text-secondary); }
+.badge--primary  { background: var(--color-primary-light); color: var(--color-primary); }
+.badge--success  { background: var(--color-success-light); color: var(--color-success); }
+.badge--warning  { background: var(--color-warning-light); color: var(--color-warning); }
+.badge--error    { background: var(--color-error-light);   color: var(--color-error); }
+.badge--info     { background: var(--color-info-light);    color: var(--color-info); }
+.badge--accent   { background: var(--color-accent-light);  color: var(--color-accent); }
+
+.badge__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  flex-shrink: 0;
+}
+
+/* Wallet Schemes */
+.wallet-badge {
+  display: inline-flex;
+  padding: 3px var(--space-2);
+  border-radius: var(--radius-sm);
+  font-size: 10px;
+  font-weight: var(--weight-bold);
+  font-family: var(--font-display);
+  letter-spacing: 0.05em;
+  color: white;
+  text-transform: uppercase;
+  min-width: 44px;
+  justify-content: center;
+}
+
+.wallet-badge--mpesa    { background: #E41B23; }
+.wallet-badge--airtel   { background: #FF0000; }
+.wallet-badge--halopesa { background: #FF6B00; }
+.wallet-badge--mixx     { background: #7C4DFF; }
+.wallet-badge--crdb     { background: #006838; }
+.wallet-badge--nmb      { background: #003A8F; color: #F5A623; }
+.wallet-badge--equity   { background: #8DC63F; }
+.wallet-badge--nbc      { background: #7A0019; }
+.wallet-badge--kcb      { background: #00A651; }
+
+.status-badge {
+  display: inline-flex;
+  padding: 2px var(--space-2);
+  border-radius: var(--radius-full);
+  font-size: 10px;
+  font-weight: var(--weight-bold);
+  letter-spacing: 0.02em;
+}
+.status-badge--success { background: var(--color-success-light); color: var(--color-success); }
+.status-badge--error   { background: var(--color-error-light);   color: var(--color-error); }
+.status-badge--warning { background: var(--color-warning-light); color: var(--color-warning); }
+.status-badge--info    { background: var(--color-info-light);    color: var(--color-info); }
+.status-badge--pending { background: var(--color-border-subtle); color: var(--color-text-muted); }

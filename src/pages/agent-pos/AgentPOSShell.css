@@ -1,0 +1,127 @@
+/* Agent-specific shell enhancements */
+.agent-platform-shell {
+  background: var(--color-bg);
+}
+
+/* On mobile, keep the body focused */
+/* Fluid responsive container for agent portal */
+.agent-mobile-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 var(--space-6);
+  position: relative;
+}
+
+@media (max-width: 992px) {
+  .agent-mobile-container {
+    max-width: 800px;
+    padding: 0 var(--space-5);
+  }
+}
+
+@media (max-width: 600px) {
+  .agent-mobile-container {
+    padding: 0 var(--space-3);
+  }
+}
+
+/* Desktop layout handled by app-shell global class */
+
+/* Quick Actions Overlay */
+.quick-actions-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  z-index: var(--z-overlay);
+  display: flex;
+  align-items: flex-end;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  padding-bottom: 90px;
+}
+
+.quick-actions-overlay--open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.quick-actions-menu {
+  width: 88%;
+  max-width: 320px;
+  margin: 0 auto;
+  background: var(--color-surface);
+  border-radius: 28px;
+  padding: var(--space-5) var(--space-3) var(--space-4);
+  transform: translateY(100%);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+  border: 1px solid var(--color-border-subtle);
+}
+
+.quick-actions-overlay--open .quick-actions-menu {
+  transform: translateY(0);
+}
+
+.quick-actions-menu__header {
+  margin-bottom: var(--space-4);
+  text-align: center;
+}
+
+.quick-actions-menu__header h3 {
+  font-family: var(--font-display);
+  font-size: var(--text-md);
+  font-weight: var(--weight-bold);
+  color: var(--color-text-primary);
+  margin-bottom: 2px;
+}
+
+.quick-actions-menu__header p {
+  font-size: 11px;
+  color: var(--color-text-muted);
+}
+
+.quick-actions-menu__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+}
+
+.quick-action-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: var(--space-2) 0;
+  transition: transform 0.2s;
+}
+
+.quick-action-item:active {
+  transform: scale(0.95);
+}
+
+.quick-action-item__icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.quick-action-item__icon--withdraw { background: linear-gradient(135deg, var(--color-error) 0%, #ff6b6b 100%); }
+.quick-action-item__icon--deposit  { background: linear-gradient(135deg, var(--color-success) 0%, #2ecc71 100%); }
+.quick-action-item__icon--pay      { background: linear-gradient(135deg, #7B2FBE 0%, #9b59b6 100%); }
+
+.quick-action-item span {
+  font-size: 11px;
+  font-weight: var(--weight-bold);
+  color: var(--color-text-secondary);
+  text-align: center;
+}
